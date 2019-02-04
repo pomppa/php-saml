@@ -78,7 +78,7 @@ class OneLogin_Saml2_LogoutRequest
                   $spData['NameIDFormat'] != OneLogin_Saml2_Constants::NAMEID_UNSPECIFIED) {
                     $nameIdFormat = $spData['NameIDFormat'];
                 }
-                $spNameQualifier = null;
+                $spNameQualifier = $spData['entityId'];
             } else {
                 $nameId = $idpData['entityId'];
                 $nameIdFormat = OneLogin_Saml2_Constants::NAMEID_ENTITY;
